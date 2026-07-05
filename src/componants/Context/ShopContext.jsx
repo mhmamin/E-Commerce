@@ -7,8 +7,8 @@ const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [token, setToken] = useState("");
   const [products, setProducts] = useState([]);
-  const url = "http://localhost:4000";
 
+  const url = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
   // 2. جلب قائمة المنتجات من السيرفر
   const fetchProductsList = async () => {
     try {

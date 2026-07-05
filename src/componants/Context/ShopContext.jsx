@@ -8,8 +8,7 @@ const ShopContextProvider = ({ children }) => {
   const [token, setToken] = useState("");
   const [products, setProducts] = useState([]);
 
-  const url = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
-  // 2. جلب قائمة المنتجات من السيرفر
+  const url = import.meta.env.VITE_API_URL || "http://localhost:4000";
   const fetchProductsList = async () => {
     try {
       const res = await axios.get(`${url}/api/product/list`);

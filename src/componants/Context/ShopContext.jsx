@@ -8,7 +8,7 @@ const ShopContextProvider = ({ children }) => {
   const [token, setToken] = useState("");
   const [products, setProducts] = useState([]);
 
-  const url = "http://localhost:4000";
+  const url = "https://back-kjrd.onrender.com";
   const fetchProductsList = async () => {
     try {
       const res = await axios.get(`${url}/api/product/list`);
